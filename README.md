@@ -61,18 +61,23 @@ V. Techniques to handling imbalanced classes
 
 1. Revisit 'Class' Feature
 
-![](images/ImbalancedClasses.png)
+    
+    ![](images/classDistribution.png)
+
 
 * Our target variable is 'Class' feature. The other PCA features are labeled from V1 to V28 except 'Time' and 'Amount' are independent variables
 * The target variable has 2 classes: Not-Fraud: 0, Fraud: 1. This is a typical binary classification.
 From the 'Class' feature, we can see only one class: 0- Not-Fraud, the other class 1-Fraud is barely showed. 
 * The danger of imbalanced classes is that the model will always predict class 0 which means it's completely ignore the minority class 1-Fraud in favor of the majority class: 0-not-Fraud.
+
 2. How to handle an imbalanced Class in Machine Learning
-    a) Up-sample Minority Class
-         * Upsampling is the process of randomly duplicating observations from the minority class in order to reinforce its signal.
-         * The most common way is to simply resample with replacement
-    b) How we do it?
-        * First, we'll separate observations from each class into different DataFrames
-        * Second, we resample the minority class with replacement, setting the number of samples to match that of the majority class.
-        * Last, we'll combine the up-sampled minority class DataFrame with the original majority class DataFrame
+   
+a) Up-sample Minority Class:
+    * Upsampling is the process of randomly duplicating observations from the minority class in order to reinforce its signal.
+    * The most common way is to simply resample with replacement
+    
+b) How we do it?
+    * First, we'll separate observations from each class into different DataFrames
+    * Second, we resample the minority class with replacement, setting the number of samples to match that of the majority class.
+    * Last, we'll combine the up-sampled minority class DataFrame with the original majority class DataFrame
 
