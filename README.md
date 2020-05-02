@@ -57,7 +57,7 @@ V. Valid Transactions Trend
 
 ![](images/validTrend.png)
 
-V. Techniques to handling imbalanced classes 
+V. Models
 
 1. Revisit 'Class' Feature
 
@@ -69,6 +69,14 @@ V. Techniques to handling imbalanced classes
 * The target variable has 2 classes: Not-Fraud: 0, Fraud: 1. This is a typical binary classification.
 From the 'Class' feature, we can see only one class: 0- Not-Fraud, the other class 1-Fraud is barely showed. 
 * The danger of imbalanced classes is that the model will always predict class 0 which means it's completely ignore the minority class 1-Fraud in favor of the majority class: 0-not-Fraud.
+
+
+    ![](images/Model_withoutTreatmen.png)
+    
+    * This is our model before applying imbalanced treatment to the 'Class' feature
+    * Accurarcy is very high 99.76% as expected because the imbalance is 0.02%
+    * But precision, recall, and f1_score are very low
+    * It is unacceptable 
 
 2. How to handle an imbalanced Class in Machine Learning
    
@@ -82,4 +90,24 @@ From the 'Class' feature, we can see only one class: 0- Not-Fraud, the other cla
     * First, we'll separate observations from each class into different DataFrames
     * Second, we resample the minority class with replacement, setting the number of samples to match that of the majority class.
     * Last, we'll combine the up-sampled minority class DataFrame with the original majority class DataFrame
+    
+    ![](images/ModelAfterTreatment.png)
+    
+    * This is our model after applying imbalanced classes treatment
+    * Accuracy, precision, recall, and f1_score are high
+    * This training model is highly yield acceptable results
+    
+    ![](images/TestModel.png)
+    
+3. Evaluation Models using Confusion Matrix
+ 
+     ![](images/ConfusionMatrix.png)
+     
+     ![](images/EvaluationMetrics.png)
+     
+4. Evaluation Models using AUROC
+
+    ![](images/AUROC.png)
+     
+     
 
