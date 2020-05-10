@@ -87,8 +87,17 @@ From the 'Class' feature, we can see only one class: 0- Not-Fraud, the other cla
     * Accurarcy is very high 99.76% as expected because the imbalance is 0.02%
     * But precision, recall, and f1_score are very low
     * It is unacceptable 
+    
+2. Performance metrics concepts:
 
-2. How to handle an imbalanced Class in Machine Learning
+    ![](images/ActualPredictedValuesConcepts.png)
+    
+    ![](images/EvaluationMetrics.png)
+    
+    * I found that the images of man and woman's pregnancy explain quite well the concepts of True positive, True negative, False positive, and False negative. 
+    * Precision, Recall (Sensitivity or True positive rate), Accuracy, and F1 score all can be deduced from mathematical formulas
+
+3. How to handle an imbalanced Class in Machine Learning
    
 * Up-sample Minority Class:
     
