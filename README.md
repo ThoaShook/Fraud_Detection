@@ -1,24 +1,26 @@
 ##### Fraud_Detection
 1. Objective:
-To identify fraudulent credit card transactions so that customers are not charged for items that they did not purchase.
-To find new fraud patterns
+    
+    * To identify fraudulent credit card transactions so that customers are not charged for items that they did not purchase.
+    * To find new fraud patterns
 
 2. About The Data:
-The datasets contains transactions made by credit cards in September 2013.These transactions occured in two days, and there are 429 frauds out of 284,807 transactions.
-PCA (Principal Component Analysis)- an unsupervised, non-parametric statistical technique is used for dimensionality reduction in machine learning. Features from v1 - v28 are the results of this PCA
-Other features (except 'Time' and 'Amount') are anonymized to protect the privacy of the customers.
-Feature 'Time' is the time elapsed between each transaction and the first transaction
-Feature 'Amount' depicts the amount of each transaction
-Feature 'Class' is the dependent variable/target variable. 1 means fraudulent, and 0 means genuine.
+    
+    * The datasets contains transactions made by credit cards in September 2013.These transactions occured in two days, and there are 429 frauds out of 284,807 transactions.
+    * PCA (Principal Component Analysis)- an unsupervised, non-parametric statistical technique is used for dimensionality reduction in machine learning. Features from v1 - v28 are the results of this PCA
+    * Other features (except 'Time' and 'Amount') are anonymized to protect the privacy of the customers.
+    * Feature 'Time' is the time elapsed between each transaction and the first transaction
+    * Feature 'Amount' depicts the amount of each transaction
+    * Feature 'Class' is the dependent variable/target variable. 1 means fraudulent, and 0 means genuine.
 
 3. Solutions:
- * Labeled data are based on historical experience, and it is hard to find unseen fraud patterns by using labeled data. Since unsupervised learning has no past knowledge, we can use unsupervised learning methods to find new fraud patterns
- * If an upcoming credit card transaction is not accepted by the trained HMM with high probability, it would be considered as fraud. Supervised and unsupervised machine learning techniques were combined to detect credit frauds. The results showed that the hybrid technique is efficient and could improve the accuracy of detection
-system for anomaly detection should NOT be a supervised ML algorithm as it will (maybe) learn only anomalies it has seen during training. The true magic lies in being able to identify an anomaly never seen before
- * As the data is very skewed - there are only 0.17% fraudulent transactions in the 280k samples - accuracy is not a good metric: any "model" predicting ALL are normal transactions will have a 99.83% accuracy.
+
+    * As the data is very skewed - there are only 0.21% fraudulent transactions in the 8k samples - accuracy is not a good metric: any "model" predicting ALL are normal transactions will have a 99.83% accuracy.
 Use Recall, Precision and their prodigy (harmonic mean) - the F1 score. Try to optimize each model's hyperparameters for the best F1.
- * The models below do not take into account the time sequences, (while still having the time as a separate feature).The time series nature of the anomaly detection should be dealt with RNN or LSMT or etc. - maybe another notebook.
-The training set does NOT include any Fraud, so when the model is exposed to one in Test, it will stand out from the normal transactions. Try dividing the Fraud half into a Validation subset and half in Test - F1 score being lower.
+    * Imbalanced classes makes 'accuracy' unreliable and it must be addressed before building our models. There are several techniques to treat imbalanced classes such as up-sample minority class, down-sample majority class, change performance metric :Area under ROC curve, penalize algorithms (cost-sensitive training) -SVM algorithms, and Tree-based algorithms
+    * This study focuses on up-sampling minority classes
+    * A comparison between the performance metrics of two logistic models before and after applying imbalanced treatment shows the improvement of the other performance metrics in terms of precision, recall, and F1 scores
+    * Models are trained and tested for accuracy, precision, and recall (sensitivity) 
 
 I. Feature Distributions:
 
