@@ -122,7 +122,7 @@ From the 'Class' feature, we can see only one class: 0- Not-Fraud, the other cla
  
      ![](images/ConfusionMatrix.png)
      
-     ![](images/EvaluationMetrics.png)
+     ![](images/ConfusionMatrixEvaluationMetrics.png)
      
 4. Evaluation Models using AUROC
 
