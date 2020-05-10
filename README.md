@@ -41,7 +41,6 @@ II. Correlation Heatmap
     * None of the V1 to V28 has any correlation to each other
     * 'Class' don't have any correlation with 'Amount' or 'Time', but it does have some form of positive and negative (mostly low negative) correlations with the 'V' components
     * 'Amount' does have some high positive correlations with V7 and V20, and high negative correlations with the V2 and V5 components
-    * We can safely focus on the three main features: Class, Amount, and Time
 
 III. Fraud vs Not-Fraud Distribution
 
@@ -49,15 +48,24 @@ III. Fraud vs Not-Fraud Distribution
 
 * Annotations:
     * There are 17 fraud transactions out of 8000 transactions during 2 consecutive days in September.
-    * This highly unbalance with respect to target variable 'Class' needs to be treated before any further data processing.
+    * This highly unbalance with respect to target variable 'Class' needs to be treated before building our models.
     
 IV. Fraudulent Transactions Trend
 
 ![](images/fraudulentTrend.png)
 
+* Notes:
+    * There are 17 fraudulent transactions over 48 hours on Sep 13th,2013. Thirteen of them are less than 50 euro per transaction.
+    * The largest amount is 354.33 euro occured at the end of the 24 hours
+    * Why the amount for each transaction is relatively small? Why, where, and how are some questions the banks should investigate
+
 V. Valid Transactions Trend
 
 ![](images/validTrend.png)
+
+* Notes:
+    * The first valid transaction occured at 0.02 hour with the amount of 34.7 euro. 
+    * The last valid transaction happend at the end of the 48 hours in investigation with the amount of 10,199 euro.
 
 V. Models
 
