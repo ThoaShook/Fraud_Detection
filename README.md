@@ -1,24 +1,22 @@
 ##### Fraud_Detection
+
 1. Objective:
     
-    * To identify fraudulent credit card transactions so that customers are not charged for items that they did not purchase.
-    * To find new fraud patterns
+    * Credit card frauds are easy and friendly targets. With the growth of the e-commerce industry and community, we see credit card fraud rise at rates faster than ever. In 2018, the United States alone accounted for $9.4 billion in fraud loss compared to the $27.85 billion lost worldwide. My friend's credit card info was stolen after she used it to pay at the QT gas station. In that essence, I wanted to design and develop a novel credit card fraud detection model for streaming transaction data, to analyze the past transaction details of the customers and extract the behavioural patterns.
 
 2. About The Data:
     
-    * The datasets contains transactions made by credit cards in September 2013.These transactions occured in two days, and there are 429 frauds out of 284,807 transactions.
+    * The datasets contains transactions made by credit cards in September 2013.These transactions occured in two days, and there are 17 frauds out of 8,000 transactions.
     * PCA (Principal Component Analysis)- an unsupervised, non-parametric statistical technique is used for dimensionality reduction in machine learning. Features from v1 - v28 are the results of this PCA
     * Other features (except 'Time' and 'Amount') are anonymized to protect the privacy of the customers.
     * Feature 'Time' is the time elapsed between each transaction and the first transaction
     * Feature 'Amount' depicts the amount of each transaction
     * Feature 'Class' is the dependent variable/target variable. 1 means fraudulent, and 0 means genuine.
-
+    
 3. Solutions:
 
-    * As the data is very skewed - there are only 0.21% fraudulent transactions in the 8k samples - accuracy is not a good metric: any "model" predicting ALL are normal transactions will have a 99.83% accuracy.
-Use Recall, Precision and their prodigy (harmonic mean) - the F1 score. Try to optimize each model's hyperparameters for the best F1.
-    * Imbalanced classes makes 'accuracy' unreliable and it must be addressed before building our models. There are several techniques to treat imbalanced classes such as up-sample minority class, down-sample majority class, change performance metric :Area under ROC curve, penalize algorithms (cost-sensitive training) -SVM algorithms, and Tree-based algorithms
-    * This study focuses on up-sampling minority classes
+    * As the data is very skewed - there are only 0.21% fraudulent transactions in the 8k samples - accuracy is not a good metric: any "model" predicting ALL are normal transactions will have a 99.79% accuracy.
+    * Imbalanced classes makes 'accuracy' unreliable and it must be addressed before building our models. There are several techniques to treat imbalanced classes such as up-sample minority class, down-sample majority class,...etc. This study focuses on up-sampling minority classes
     * A comparison between the performance metrics of two logistic models before and after applying imbalanced treatment shows the improvement of the other performance metrics in terms of precision, recall, and F1 scores
     * Models are trained and tested for accuracy, precision, and recall (sensitivity) 
 
