@@ -138,6 +138,11 @@ VIII. Key-takeaways
 
     * I was working with a heavy imbalance data. Out of 8k transactions within 48 hours only 17 are frauds. My first model had a very high accuracy of 98%, but low precision 41%, recall 29%, and f1-score 34% which was unacceptable. I have learned that to build reliable models with heavily imbalanced data, I need to treat the unbalanced data first. After ‘up sampling’ the fraudulent data, my model produced high yield in accuracy, precision, and recall. My final model yielded an accuracy of 90%, precision 92%, recall 88.6% and f1-score 90.38%.
 
+IX. Challenging
+
+     * The most challenging while working on this project was to figure out which technique I would use to treat imbalanced classes in machine learning. If handled improperly, my model was useless because it couldn’t detect fraudulent transactions even though yielding high accuracy. There were several techniques out there, and I had to test each of them, and came up with the ‘Up Sampling’ method that yielded acceptable results.
+     
+
 
 
      
