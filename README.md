@@ -141,7 +141,11 @@ VIII. Key-takeaways
 IX. Challenging
 
      * The most challenging while working on this project was to figure out which technique I would use to treat imbalanced classes in machine learning. If handled improperly, my model was useless because it couldn’t detect fraudulent transactions even though yielding high accuracy. There were several techniques out there, and I had to test each of them, and came up with the ‘Up Sampling’ method that yielded acceptable results.
-     
+    
+X. How would I improve or extend my models if I have more time in the future?
+
+    * My model was very good in capturing fraudulent transactions with highly reliable accuracy. It was able to analyze the past transaction details of the customers such as time, amount, and behaviour patterns. However, when the dataset is not big enough, the model can overlook a seemingly obvious connection such as a shared card between two accounts. To encounter this, and if I have time, I would enhance my model with Graph networks. Graph DB will allow me to block suspects and their accounts before they have taken any fraudulent action.
+
 
 
 
