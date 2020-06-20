@@ -53,8 +53,8 @@ IV. Fraudulent Transactions Trend
 ![](images/fraudulentTrend.png)
 
 * Notes:
-    * There are 17 fraudulent transactions over 48 hours on Sep 13th,2013. Thirteen of them are less than 50 euro per transaction.
-    * The largest amount is 354.33 euro occured at the end of the 24 hours
+    * There are 17 fraudulent transactions over 48 hours on Sep 13th,2013. Thirteen of them are less than 50 euros per transaction.
+    * The largest amount is 354.33 euros occured at the end of the 24 hours
     * Why the amount for each transaction is relatively small? Why, where, and how are some questions the banks should investigate
 
 V. Valid Transactions Trend
@@ -62,10 +62,10 @@ V. Valid Transactions Trend
 ![](images/validTrend.png)
 
 * Notes:
-    * The first valid transaction occured at 0.02 hour with the amount of 34.7 euro. 
-    * The last valid transaction happend at the end of the 48 hours in investigation with the amount of 10,199 euro.
+    * The first valid transaction occured at 0.02 hour with the amount of 34.7 euros. 
+    * The last valid transaction happend at the end of the 48 hours in investigation with the amount of 10,199 euros.
 
-V. Models
+VI. Models
 
 1. Revisit 'Class' Feature
 
@@ -88,9 +88,13 @@ From the 'Class' feature, we can see only one class: 0- Not-Fraud, the other cla
     
 2. Performance metrics concepts:
 
+    
     ![](images/ActualPredictedValuesConcepts.png)
     
+    
+    
     ![](images/EvaluationMetrics.png)
+    
     
     * I found that the images of man and woman's pregnancy explain quite well the concepts of True positive, True negative, False positive, and False negative. 
     * Precision, Recall (Sensitivity or True positive rate), Accuracy, and F1 score all can be deduced from mathematical formulas
@@ -117,15 +121,25 @@ From the 'Class' feature, we can see only one class: 0- Not-Fraud, the other cla
     
     ![](images/TestModel.png)
     
-3. Evaluation Models using Confusion Matrix
+VII-1. Evaluation Models using Confusion Matrix
  
      ![](images/ConfusionMatrix.png)
      
+     
      ![](images/ConfusionMatrixEvaluationMetrics.png)
      
-4. Evaluation Models using AUROC
+
+VII-2. Evaluation Models using AUROC
 
     ![](images/AUROC.png)
+    
+
+VIII. Key-takeaways
+
+    * I was working with a heavy imbalance data. Out of 8k transactions within 48 hours only 17 are frauds. My first model had a very high accuracy of 98%, but low precision 41%, recall 29%, and f1-score 34% which was unacceptable. I have learned that to build reliable models with heavily imbalanced data, I need to treat the unbalanced data first. After ‘up sampling’ the fraudulent data, my model produced high yield in accuracy, precision, and recall. My final model yielded an accuracy of 90%, precision 92%, recall 88.6% and f1-score 90.38%.
+
+
+
      
      
 
