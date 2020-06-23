@@ -2,7 +2,9 @@
 
 1. Objective:
     
-    * Credit card frauds are easy and friendly targets. With the growth of the e-commerce industry and community, we see credit card fraud rise at rates faster than ever. In 2018, the United States alone accounted for $9.4 billion in fraud loss compared to the $27.85 billion lost worldwide. My friend's credit card info was stolen after she used it to pay at the QT gas station. In that essence, I wanted to design and develop a novel credit card fraud detection model for streaming transaction data, to analyze the past transaction details of the customers and extract the behavioural patterns.
+    * Credit card frauds are easy and friendly targets. With the growth of the e-commerce industry and community, we see credit card fraud rise at rates faster than ever. In 2018, the United States alone accounted for $9.4 billion in fraud loss compared to the $27.85 billion lost worldwide.
+    * My friend's credit card info was stolen after she used it to pay at the QT gas station. 
+    * I wanted to design and develop a novel credit card fraud detection model for streaming transaction data, to analyze the past transaction details of the customers and extract the behavioural patterns.
 
 2. About The Data:
     
