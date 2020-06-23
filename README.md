@@ -47,6 +47,10 @@ III. Fraud vs Not-Fraud Distribution
 * Annotations:
     * There are 17 fraud transactions out of 8000 transactions during 2 consecutive days in September.
     * This highly unbalance with respect to target variable 'Class' needs to be treated before building our models.
+    * Our target variable is 'Class' feature. The other PCA features are labeled from V1 to V28 except 'Time' and 'Amount' are independent variables
+    * The target variable has 2 classes: Not-Fraud: 0, Fraud: 1. This is a typical binary classification.
+From the 'Class' feature, we can see only one class: 0- Not-Fraud, the other class 1-Fraud is barely showed. 
+    * The danger of imbalanced classes is that the model will always predict class 0 which means it's completely ignore the minority class 1-Fraud in favor of the majority class: 0-not-Fraud.
     
 IV. Fraudulent Transactions Trend
 
@@ -67,18 +71,6 @@ V. Valid Transactions Trend
 
 VI. Models
 
-1. Revisit 'Class' Feature
-
-    
-    ![](images/classDistribution.png)
-
-
-* Our target variable is 'Class' feature. The other PCA features are labeled from V1 to V28 except 'Time' and 'Amount' are independent variables
-* The target variable has 2 classes: Not-Fraud: 0, Fraud: 1. This is a typical binary classification.
-From the 'Class' feature, we can see only one class: 0- Not-Fraud, the other class 1-Fraud is barely showed. 
-* The danger of imbalanced classes is that the model will always predict class 0 which means it's completely ignore the minority class 1-Fraud in favor of the majority class: 0-not-Fraud.
-
-
     ![](images/Model_withoutTreatmen.png)
     
     * This is our model before applying imbalanced treatment to the 'Class' feature
@@ -90,10 +82,6 @@ From the 'Class' feature, we can see only one class: 0- Not-Fraud, the other cla
 
     
     ![](images/ActualPredictedValuesConcepts.png)
-    
-    
-    
-    ![](images/EvaluationMetrics.png)
     
     
     * I found that the images of man and woman's pregnancy explain quite well the concepts of True positive, True negative, False positive, and False negative. 
@@ -136,15 +124,24 @@ VII-2. Evaluation Models using AUROC
 
 VIII. Key-takeaways
 
-    * I was working with a heavy imbalance data. Out of 8k transactions within 48 hours only 17 are frauds. My first model had a very high accuracy of 98%, but low precision 41%, recall 29%, and f1-score 34% which was unacceptable. I have learned that to build reliable models with heavily imbalanced data, I need to treat the unbalanced data first. After ‘up sampling’ the fraudulent data, my model produced high yield in accuracy, precision, and recall. My final model yielded an accuracy of 90%, precision 92%, recall 88.6% and f1-score 90.38%.
+    * I was working with a heavy imbalance data. Out of 8k transactions within 48 hours only 17 are frauds.
+    * My first model had a very high accuracy of 98%, but low precision 41%, recall 29%, and f1-score 34% which was unacceptable. 
+    * I have learned that to build reliable models with heavily imbalanced data, I need to treat the unbalanced data first. After ‘up sampling’ the fraudulent data, my model produced high yield in accuracy, precision, and recall. 
+    * My final model yielded an accuracy of 90%, precision 92%, recall 88.6% and f1-score 90.38%.
 
 IX. Challenging
 
-     * The most challenging while working on this project was to figure out which technique I would use to treat imbalanced classes in machine learning. If handled improperly, my model was useless because it couldn’t detect fraudulent transactions even though yielding high accuracy. There were several techniques out there, and I had to test each of them, and came up with the ‘Up Sampling’ method that yielded acceptable results.
+     * The most challenging while working on this project was to figure out which technique I would use to treat imbalanced classes in machine learning. 
+     * If handled improperly, my model was useless because it couldn’t detect fraudulent transactions even though yielding high accuracy. 
+     * There were several techniques out there and I had to test each of them, and came up with the ‘Up Sampling’ method that yielded acceptable results.
     
 X. How would I improve or extend my models if I have more time in the future?
 
-    * My model was very good in capturing fraudulent transactions with highly reliable accuracy. It was able to analyze the past transaction details of the customers such as time, amount, and behaviour patterns. However, when the dataset is not big enough, the model can overlook a seemingly obvious connection such as a shared card between two accounts. To encounter this, and if I have time, I would enhance my model with Graph networks. Graph DB will allow me to block suspects and their accounts before they have taken any fraudulent action.
+    * My model was very good in capturing fraudulent transactions with highly reliable accuracy. 
+    * It was able to analyze the past transaction details of the customers such as time, amount, and behaviour patterns. 
+    * However, when the dataset is not big enough, the model can overlook a seemingly obvious connection such as a shared card between two accounts.
+    * To encounter this, and if I have time, I would enhance my model with Graph networks.
+    * Graph DB will allow me to block suspects and their accounts before they have taken any fraudulent action.
 
 
 
