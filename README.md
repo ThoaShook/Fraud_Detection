@@ -101,7 +101,7 @@ VI. Models
     
     ![](images/ModelAfterTreatment.png)
     
-    * This is our model after applying imbalanced classes treatment. This training model is highly yield acceptable results
+    * This is our model after up-sampling the fradulent class. This training model is highly yield acceptable results
     * Accuracy descreases but still in acceptable range of 90% 
     * Recall or sensitivity is high 88.6% is the ability our model accurately predicts fraudulent transactions
     * Our model gives a precision of 92.2% meaning that all of fraudulent transactions that our model predicted, we are correct 92.2% of the time.
