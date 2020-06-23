@@ -23,7 +23,6 @@
 I. Feature Distributions:
 
 ![](images/histogram1.png)
-![](images/histogram2.png)
 
 * Annotations:
     * There are two columns in the 'Amount' feature. We can assume that the tall - dominant column is associated with the valid transactions whereas the very low-barely notice column is corresponding with the fraudulent transactions
@@ -111,15 +110,15 @@ VI. Models
     
 VII-1. Evaluation Models using Confusion Matrix
  
-     ![](images/ConfusionMatrix.png)
+![](images/ConfusionMatrix.png)
      
-     
-     ![](images/ConfusionMatrixEvaluationMetrics.png)
+    
+![](images/ConfusionMatrixEvaluationMetrics.png)
      
 
 VII-2. Evaluation Models using AUROC
 
-    ![](images/AUROC.png)
+![](images/AUROC.png)
     
 
 VIII. Key-takeaways
